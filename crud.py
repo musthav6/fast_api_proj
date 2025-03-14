@@ -1,10 +1,8 @@
 from sqlalchemy.orm import Session
-from sqlalchemy.exc import IntegrityError
 import models
 import schemas
-from fastapi import HTTPException, status
+from fastapi import HTTPException
 from passlib.context import CryptContext
-from uuid import uuid4
 import jwt
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
